@@ -18,3 +18,55 @@ This project is a **Trading Strategy Simulator** that allows users to backtest a
 ```bash
 git clone https://github.com/kingigbozuruike/trading-strategy-simulator.git
 cd trading-strategy-simulator
+```
+
+### 2. Install dependencies
+You can install the required dependencies using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the simulator
+To run the simulator, execute the Python script:
+
+```bash
+python trading_sim.py
+```
+The GUI will appear, and you can input the stock ticker and initial cash to begin the simulation.
+
+## How It Works
+
+### 1. User Input:
+The user is prompted to enter a stock ticker symbol (e.g., AAPL for Apple) and an initial cash amount for the portfolio.
+
+### 2. Stock Data Retrieval:
+The project fetches historical stock data from Yahoo Finance using the yfinance library.
+
+### 3. Signal Generation:
+The 50-day SMA and 200-day SMA are calculated for the given stock.
+Buy and sell signals are generated based on the crossover of the SMAs.
+
+### 4. Backtesting:
+The backtest simulates buying and selling actions using the strategy, tracking the portfolio value at each step.
+
+### 5. Visualization:
+A graph of the stock price, SMAs, and portfolio value is displayed for visual analysis.
+
+## Example
+<img width="1440" alt="Screenshot 2024-12-31 at 8 05 03 PM" src="https://github.com/user-attachments/assets/1e299dd7-7de5-43c4-b518-19b0f923a9a3" />
+
+## Future Enhancements
+Additional Strategy Options: Implement other technical indicators (e.g., RSI, MACD) for signal generation.
+Real-Time Trading: Integrate the simulator with real-time stock data for live trading.
+Performance Metrics: Add more detailed metrics like Sharpe ratio, maximum drawdown, etc.
+User Customization: Allow the user to specify different strategy parameters, such as SMA window size.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+yfinance: Used for retrieving historical stock data from Yahoo Finance.
+matplotlib: Used for generating visualizations of stock prices and portfolio performance.
+
+
