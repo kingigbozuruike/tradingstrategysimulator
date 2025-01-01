@@ -51,9 +51,10 @@ def backtest_strategy(stock_data, initial_cash=100000):
 
 
 # Define the stock ticker, start and end dates
-ticker = 'AAPL'
-start_date = '2010-01-01'
-end_date = '2020-01-01'
+ticker = input("Enter the stock ticker (e.g., 'AAPL', 'GOOG'): ").upper()
+start_date = input("Enter the start date (YYYY-MM-DD): ")
+end_date = input("Enter the end date (YYYY-MM-DD): ")
+initial_cash = float(input("Enter the initial cash amount for backtest: "))
 
 # fetch and generate signals
 stock_data = get_stock_data(ticker, start_date, end_date)
